@@ -1,0 +1,18 @@
+<div class="text-center">
+  <h1 class="bg-danger">Pick a match!</h1>
+  <div *ngIf="!hasLost">
+      <button class="btn" (click)="showMatch(1)"><img src='assets/images/{{shownMatch1}}.png' alt="preview picture of match"></button>
+      <button class="btn" (click)="showMatch(2)"><img src='assets/images/{{shownMatch2}}.png' alt="preview picture of match"></button>
+      <button class="btn" (click)="showMatch(3)"><img src="assets/images/{{shownMatch3}}.png" alt="preview picture of match"></button>
+      <button class="btn" (click)="showMatch(4)"><img src="assets/images/{{shownMatch4}}.png" alt="preview picture of match"></button>
+      <button class="btn" (click)="showMatch(5)"><img src="assets/images/{{shownMatch5}}.png" alt="preview picture of match"></button>
+      <button class="btn"  (click)="showMatch(6)"><img src="assets/images/{{shownMatch6}}.png" alt="preview picture of match"></button>
+  </div>
+  <div *ngIf="hasLost">
+    <h2>you picked the broken match you lost :(</h2>
+    <img src="assets/images/brokenMatch.png" alt="broken match"><br>
+    <button class="btn-danger btn restartButton" (click)="restart()">Go back</button>
+  </div>
+</div>
+
+
